@@ -1,0 +1,32 @@
+/* From Uiverse.io by Tiagoadag */ 
+.service-card-design {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(163deg, #870be7 0%, #5e1054 100%);
+    border-radius:0 30px 0 30px;
+    transition: all .3s;
+   }
+   
+   .service-card-design-2{
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    border-radius:0 30px 0 30px;
+    transition: all .2s;
+   }
+   
+   .service-card-design-2:hover {
+    transform: scale(0.99);
+    border-radius:0 30px 0 30px;
+   }
+   
+   .service-card-design:hover {
+    /* transform: scale(1.02); */
+
+    box-shadow: 0px 0px 30px 1px rgba(163, 132, 249, 0.3);
+   }
+
+  .card-btn:hover{
+    color: #3700ff;
+  }
+  
