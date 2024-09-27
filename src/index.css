@@ -39,6 +39,7 @@ html {
 
 body {
   background-color: #0c0e0c !important;
+  /* overflow: hidden; */
 }
 
 /* font size */

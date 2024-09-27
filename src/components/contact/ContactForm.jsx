@@ -16,7 +16,7 @@ const ContactForm = () => {
     <div id="contact-section" style={{ padding: "50px 0" }}>
       <Container className="mt-5">
         <div className="contact-heading text-center">
-          <h2 style={{ color: "#870be7", fontSize: "40px" }}>
+          <h2 style={{ color: "#fff", fontSize: "40px" }}>
             Let’s Build Together.
           </h2>
           <p style={{ color: "white" }}>
@@ -35,10 +35,9 @@ const ContactForm = () => {
                 height: "100%",
                 borderRadius: "20px",
                 boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
-                // border: "1px solid #fff",
               }}
             >
-              <h3 className="mb-3" style={{ color: "#870be7" }}>
+              <h3 className="mb-3" style={{ color: "#fff" }}>
                 Meet Us
               </h3>
               <div className="d-flex flex-column">
@@ -76,7 +75,7 @@ const ContactForm = () => {
                   />
                   support@madads.co.in
                 </p>
-                <h3 style={{ color: "#870be7" }}>Location</h3>
+                <h3 style={{ color: "#fff" }}>Location</h3>
                 <p
                   className="d-flex align-items-center"
                   style={{
@@ -127,6 +126,7 @@ const ContactForm = () => {
             </div>
           </Col>
 
+          {/* Form Section */}
           <Col xs={12} md={6} className="mb-4">
             <div
               className="contact-details p-4"
@@ -136,94 +136,92 @@ const ContactForm = () => {
                 height: "100%",
                 borderRadius: "20px",
                 boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
-                // border: "1px solid #fff",
               }}
             >
               <h3
                 style={{
                   marginBottom: "20px",
                   fontWeight: "bold",
-                  color: "#870be7",
+                  color: "#fff",
                 }}
               >
                 Talk To Us
               </h3>
               <Form>
                 <Form.Group controlId="formGroupName">
-                  <p style={{ fontSize: "16px", color: "white" }}>
-                    Hello, my name is
-                    <Form.Control
-                      className="mb-2 enquiry-input"
-                      type="text"
-                      placeholder="name"
-                      style={{
-                        display: "inline-block",
-                        width: "150px",
-                        marginLeft: "10px",
-                        marginRight: "10px",
-                        borderRadius: "25px",
-                        border: "1px solid #ccc",
-                        padding: "8px 12px",
-                        background: "transparent",
-                        color: "white",
-                      }}
-                    />
-                    and my email address is
-                    <Form.Control
-                      className="mb-2 enquiry-input"
-                      type="email"
-                      placeholder="email"
-                      style={{
-                        display: "inline-block",
-                        width: "200px",
-                        marginLeft: "10px",
-                        marginRight: "10px",
-                        borderRadius: "25px",
-                        border: "1px solid #ccc",
-                        padding: "8px 12px",
-                        background: "transparent",
-                        color: "white",
-                      }}
-                    />
-                    I am From
-                    <Form.Control
-                      className="mb-2 enquiry-input"
-                      type="text"
-                      placeholder="City"
-                      style={{
-                        display: "inline-block",
-                        width: "200px",
-                        marginLeft: "10px",
-                        marginRight: "10px",
-                        borderRadius: "25px",
-                        border: "1px solid #ccc",
-                        padding: "8px 12px",
-                        background: "transparent",
-                        color: "white",
-                      }}
-                    />
-                    and I would like to chat about
-                    <Form.Control
-                      className="enquiry-input"
-                      type="text"
-                      as="textarea"
-                      rows={2}
-                      placeholder="Message"
-                      style={{
-                        display: "block",
-                        width: "100%",
-                        marginTop: "10px",
-                        marginBottom: "20px",
-                        borderRadius: "15px",
-                        border: "1px solid #ccc",
-                        padding: "10px",
-                        background: "transparent",
-                        color: "white",
-                      }}
-                    />
-                  </p>
+                  <Form.Label style={{ color: "white", fontSize: "16px" }}>
+                    Name
+                  </Form.Label>
+                  <Form.Control
+                    className="mb-3 enquiry-input"
+                    type="text"
+                    placeholder="Your Name"
+                    style={{
+                      borderRadius: "25px",
+                      border: "1px solid #ccc",
+                      padding: "10px",
+                      background: "transparent",
+                      color: "white",
+                    }}
+                  />
                 </Form.Group>
-                <div className="d-flex justify-content-between align-items-center">
+
+                <Form.Group controlId="formGroupEmail">
+                  <Form.Label style={{ color: "white", fontSize: "16px" }}>
+                    Email
+                  </Form.Label>
+                  <Form.Control
+                    className="mb-3 enquiry-input"
+                    type="email"
+                    placeholder="Your Email"
+                    style={{
+                      borderRadius: "25px",
+                      border: "1px solid #ccc",
+                      padding: "10px",
+                      background: "transparent",
+                      color: "white",
+                    }}
+                  />
+                </Form.Group>
+
+                <Form.Group controlId="formGroupCity">
+                  <Form.Label style={{ color: "white", fontSize: "16px" }}>
+                    City
+                  </Form.Label>
+                  <Form.Control
+                    className="mb-3 enquiry-input"
+                    type="text"
+                    placeholder="Your City"
+                    style={{
+                      borderRadius: "25px",
+                      border: "1px solid #ccc",
+                      padding: "10px",
+                      background: "transparent",
+                      color: "white",
+                    }}
+                  />
+                </Form.Group>
+
+                <Form.Group controlId="formGroupMessage">
+                  <Form.Label style={{ color: "white", fontSize: "16px" }}>
+                    Message
+                  </Form.Label>
+                  <Form.Control
+                    className="enquiry-input"
+                    as="textarea"
+                    rows={3}
+                    placeholder="Your Message"
+                    style={{
+                      borderRadius: "15px",
+                      border: "1px solid #ccc",
+                      padding: "10px",
+                      background: "transparent",
+                      color: "white",
+                    }}
+                  />
+                </Form.Group>
+
+                <div className="d-flex justify-content-between align-items-center mt-3">
                   <div
                     className="g-recaptcha"
                     data-sitekey="your_site_key"

@@ -4,7 +4,6 @@ import { aboutUsData } from "../../data";
 export const WhyUsSection = () => {
   return (
     <div style={{ background: "#eee" }} className="py-5">
-      {" "}
       <Container className="my-5 mt-5 position-relative">
         <div data-aos="fade-right">
           {/* <span className="sno" style={{ color: "black" }}>

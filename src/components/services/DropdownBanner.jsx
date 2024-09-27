@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "./service.css";
 
-const ServiceBanner = ({
+const DropdownBanner = ({
   imageSrc,
   heading,
   subHeading,
@@ -14,7 +14,7 @@ const ServiceBanner = ({
       <Container className="vh-md-100 d-flex flex-column">
         <Row className="flex-grow-1 align-items-center">
           {/* Image Column */}
-          <Col xs={12} md={4} className="order-1 order-md-2 mt-5 serv-img">
+          <Col xs={12} md={6} className="order-1 order-md-2 mt-5 serv-img">
             <div style={{ position: "relative", width: "100%" }}>
               <div
                 style={{
@@ -27,33 +27,16 @@ const ServiceBanner = ({
                   src={imageSrc}
                   alt=""
                   style={{
-                    width: "90%",
-                    overflow: "hidden",
+                    width: "100%",
+                    height: "100%",
                   }}
-                  className="rotate-img"
                 />
-              </div>
-              <div
-                style={{
-                  position: "absolute",
-                  bottom: "-20px",
-                  padding: "10px 20px",
-                  backgroundColor: "#870be7",
-                  border: "1px solid white",
-                  color: "#fff",
-                  borderRadius: "8px",
-                  display: "flex",
-                  justifyContent: "center",
-                  width: "100%",
-                }}
-              >
-                <strong>{subHeading}</strong>
               </div>
             </div>
           </Col>
 
           {/* Content Column */}
-          <Col xs={12} md={8} className="home-content order-2 order-md-1 mt-5">
+          <Col xs={12} md={6} className="home-content order-2 order-md-1 mt-5">
             <h2 style={{ fontSize: "60px", color: "#fff" }}>{heading}</h2>
             <p style={{ color: "white" }}>{description}</p>
             <Button
@@ -77,4 +60,4 @@ const ServiceBanner = ({
   );
 };
 
-export default ServiceBanner;
+export default DropdownBanner;

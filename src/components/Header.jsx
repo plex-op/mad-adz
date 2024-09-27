@@ -1,6 +1,12 @@
 import { useState, useEffect, useRef } from "react";
-import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import {
+  Container,
+  Nav,
+  Navbar,
+  Offcanvas,
+  NavDropdown,
+} from "react-bootstrap";
+import { Link, NavLink } from "react-router-dom";
 
 function Header() {
   const [show, setShow] = useState(false);
@@ -107,6 +113,25 @@ function Header() {
                 >
                   Our Clients
                 </Nav.Link> */}
+                <NavDropdown
+                  title="Services"
+                  id="basic-nav-dropdown"
+                  style={{ color: "white" }}
+                >
+                  <NavDropdown.Item as={NavLink} to="/services/webdevelopment">
+                    Web Development
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={NavLink} to="/services/branding">
+                    Branding
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={NavLink} to="/services/designing">
+                    Designing
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={NavLink} to="/services/contentcreation">
+                    Content Creation
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                </NavDropdown>
                 <Nav.Link
                   as={Link}
                   to="/contact"
