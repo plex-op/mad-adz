@@ -88,13 +88,13 @@ function Header() {
                 >
                   About
                 </NavLink>
-                <NavLink
+                {/* <NavLink
                   to="/services"
                   className="nav-link"
                   onClick={handleClose}
                 >
                   Products
-                </NavLink>
+                </NavLink> */}
                 <NavDropdown
                   title={
                     <span style={{ color: "white" }}>

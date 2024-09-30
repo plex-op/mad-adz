@@ -33,7 +33,7 @@ const AboutPoints = () => {
                   borderRadius: "15px", // Rounded corners
                   boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)", // Soft shadow for depth
                   border: "1px solid rgba(255, 255, 255, 0.1)", // Subtle border
-                  maxWidth: "400px", // Card size limit
+                  width: "100%", // Card size limit
                   margin: "auto", // Center the card horizontally
                 }}
                 className="about-card-des"

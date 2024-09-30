@@ -48,10 +48,9 @@ export const aboutUsData = [
 export const bannerData = [
   {
     title: "About Us",
-    mainText: "For Every Problem,",
-    spanText: "There's a Solution",
+    mainText: "Empowering Your Digital Journey",
     description:
-      "Our services are tailor-made to your needs, aligning our strategy with your requirements.",
+      "At MADADZ, we transform ideas into impactful digital solutions, blending creativity and technology to elevate brands. Our dedicated team of experts collaborates closely with clients to deliver tailored services in web development, design, and content creation. Passionate about innovation and excellence, we celebrate every project as a shared journey toward success.",
   },
 ];
 
@@ -88,22 +87,26 @@ export const aboutPointsHeading = {
 export const cardData = [
   {
     img: "img/power.png", // Replace with actual image paths
-    title: "Milestone 1",
-    description: "Description of the first milestone.",
+    title: "Foundation Laid",
+    description:
+      "Established with a mission to provide cutting-edge digital solutions, we set the groundwork for creativity and technology to converge.",
   },
   {
     img: "img/power.png",
-    title: "Milestone 2",
-    description: "Description of the second milestone.",
+    title: "Recognition and Growth",
+    description:
+      "Achieved industry recognition for our work, which fueled our passion and commitment to continuously improve and adapt to the ever-changing digital landscape.",
   },
   {
     img: "img/power.png",
-    title: "Milestone 3",
-    description: "Description of the third milestone.",
+    title: "Team Expansion",
+    description:
+      "Grew our talented team, bringing in diverse skills and perspectives to enhance our offerings and foster a culture of innovation.",
   },
   {
     img: "img/power.png",
-    title: "Milestone 4",
-    description: "Description of the fourth milestone.",
+    title: "Celebrating Success Together",
+    description:
+      "Through every project and partnership, we celebrated shared successes with our clients, reinforcing our commitment to achieving remarkable outcomes together.",
   },
 ];

@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CommonLayout from "./layout/CommonLayout";
 import Home from "./pages/Home";
-import Services from "./pages/Services";
+// import Services from "./pages/Services";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -18,7 +18,7 @@ export const App = () => {
         <Routes>
           <Route element={<CommonLayout />}>
             <Route path="/" element={<Home />} />
-            <Route path="/services" element={<Services />} />
+            {/* <Route path="/services" element={<Services />} /> */}
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/contact" element={<Contact />} />
             <Route

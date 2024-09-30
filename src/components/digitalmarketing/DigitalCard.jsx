@@ -8,19 +8,19 @@ const cardData = [
     title: "Marketing Strategy",
     description:
       "A well-crafted marketing strategy aligns your brand's objectives with insights into your target audience, driving sustainable long-term growth. It integrates comprehensive market research, thorough competitor analysis, and strategic key messaging to enhance brand visibility and boost customer engagement. By focusing on audience needs and preferences, your marketing efforts can effectively connect with potential customers, leading to increased loyalty and conversions.",
-    imageUrl: "/img/tech/adobe-illustrator.svg",
+    imageUrl: "/img/mars.png",
   },
   {
     title: "Digital Advertising",
     description:
       "Leverage powerful digital platforms such as Google, social media, and display networks to precisely reach your target audience. With targeted advertising, data-driven campaigns, and rigorous performance tracking, you can maximize your return on investment (ROI) while optimizing user engagement. Implementing effective digital advertising strategies ensures that your brand message resonates with the right audience at the right time, driving measurable results.",
-    imageUrl: "/img/tech/adobe-illustrator.svg",
+    imageUrl: "/img/adz.png",
   },
   {
     title: "Media Strategy",
     description:
       "An effective media strategy seamlessly blends traditional and digital channels to amplify your brand’s visibility and impact. By analyzing audience behavior and media consumption patterns, you can ensure optimal reach and frequency across multiple touchpoints. A well-rounded media strategy allows you to connect with your audience where they are most engaged, enhancing brand recognition and fostering meaningful interactions.",
-    imageUrl: "/img/tech/adobe-illustrator.svg",
+    imageUrl: "/img/mes.png",
   },
 ];
 
