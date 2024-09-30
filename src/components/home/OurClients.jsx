@@ -84,15 +84,26 @@ function OurClients({ clientLogoRef }) {
           <Slider {...settings}>
             {clients.map((client, index) => (
               <div key={index} className="text-center p-3">
-                <img
-                  src={client.logo}
-                  alt={client.title}
-                  style={{
-                    width: "130px",
-                    height: "auto",
-                    objectFit: "contain",
-                  }}
-                />
+                <div
+                  style={
+                    {
+                      // background: "#ddd",
+                      // boxShadow: "0px 0px 30px 1px rgba(163, 132, 249, 0.3)",
+                    }
+                  }
+                  className="d-flex justify-content-center"
+                >
+                  <img
+                    src={client.logo}
+                    alt={client.title}
+                    style={{
+                      width: "150px",
+                      height: "auto",
+                      objectFit: "contain",
+                      filter: "drop-shadow(0.5rem 0.5rem 1rem grey)",
+                    }}
+                  />
+                </div>
               </div>
             ))}
           </Slider>

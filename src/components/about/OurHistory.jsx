@@ -1,15 +1,15 @@
 import React from "react";
-import { Container, Card, Button } from "react-bootstrap";
+import { Container, Card, Row, Col } from "react-bootstrap";
 import { historyContent } from "../../data"; // Ensure this file exports an array of objects
 import "./about.css";
 
 const OurHistory = () => {
   return (
-    <div style={{ background: "#1a1a1a" }} className="py-5">
-      <Container className="d-flex justify-content-center align-items-center h-100 ">
+    <div style={{ background: "#eee" }} className="py-5">
+      <Container className="d-flex flex-column justify-content-center align-items-center h-100">
         {historyContent.map((data, index) => (
           <Card
-            className="text-left w-100 history-card"
+            className="w-100 mb-4 history-card"
             key={index}
             style={{
               background: "#1a1a1a", // Dark background (slightly off-black for depth)
@@ -17,64 +17,84 @@ const OurHistory = () => {
               border: "none", // Removes default Bootstrap border
             }}
           >
-            <Card.Body>
-              <Card.Title
-                style={{
-                  fontSize: "2.5rem",
-                  fontWeight: "bold",
-                  position: "relative",
-                }}
-                className="history-card-title"
-              >
-                {data.title}
-                <div
-                  style={{
-                    width: "100px",
-                    height: "4px",
-                    backgroundColor: "#870be7",
-                    marginTop: "10px",
-                    transformOrigin: "left",
-                  }}
-                ></div>
-              </Card.Title>
-              <ul
-                style={{
-                  fontSize: "1.1rem",
-                  marginBottom: "1.5rem",
-                  listStyle: "none",
-                  paddingLeft: "0",
-                }}
-                className="history-card-des"
-              >
-                {data.description.map((point, i) => (
-                  <li key={i} style={{ marginBottom: "0.5rem" }}>
-                    {point}
-                  </li>
-                ))}
-              </ul>
-              {/* <Button
-                style={{
-                  backgroundColor: "transparent", // Transparent background
-                  border: "2px solid #870be7", // Attractive gold-colored border
-                  color: "#000", // Matching text color
-                  borderRadius: "30px", // Rounded button edges
-                  padding: "10px 20px", // Spacing for better size and padding
-                  fontWeight: "bold", // Make text bold
-                  transition: "all 0.3s ease", // Smooth hover transition
-                }}
-                className="abt-his-btn"
-                onMouseEnter={(e) => (
-                  (e.target.style.backgroundColor = "#870be7"),
-                  (e.target.style.color = "#000")
-                )} // Hover effect: Fill with color
-                onMouseLeave={(e) => (
-                  (e.target.style.backgroundColor = "transparent"),
-                  (e.target.style.color = "##870be7")
-                )} // Reset on hover out
-              >
-                {data.buttonText}
-              </Button> */}
-            </Card.Body>
+            <Row className="align-items-center">
+              {/* Left Column: Image */}
+              <Col md={6}>
+                <div className="d-flex justify-content-center align-items-center">
+                  <img
+                    src={data.imageUrl}
+                    alt={data.title}
+                    style={{
+                      maxWidth: "100%", // Ensure it fits within the column
+                      height: "auto",
+                      borderRadius: "10px", // Optional: Rounded corners for the image
+                    }}
+                  />
+                </div>
+              </Col>
+
+              {/* Right Column: Content */}
+              <Col md={6}>
+                <Card.Body>
+                  <Card.Title
+                    style={{
+                      fontSize: "2.5rem",
+                      fontWeight: "bold",
+                      position: "relative",
+                    }}
+                    className="history-card-title"
+                  >
+                    {data.title}
+                    <div
+                      style={{
+                        width: "100px",
+                        height: "4px",
+                        backgroundColor: "#870be7",
+                        marginTop: "10px",
+                        transformOrigin: "left",
+                      }}
+                    ></div>
+                  </Card.Title>
+                  {/* Displaying the description as paragraphs */}
+                  <div
+                    style={{
+                      fontSize: "1.1rem",
+                      marginBottom: "1.5rem",
+                    }}
+                    className="history-card-des"
+                  >
+                    {data.description.map((point, i) => (
+                      <p key={i} style={{ marginBottom: "0.5rem" }}>
+                        {point}
+                      </p>
+                    ))}
+                  </div>
+                  {/* Optional Button, uncomment if needed */}
+                  {/* <Button
+      style={{
+        backgroundColor: "transparent",
+        border: "2px solid #870be7",
+        color: "#fff",
+        borderRadius: "30px",
+        padding: "10px 20px",
+        fontWeight: "bold",
+        transition: "all 0.3s ease",
+      }}
+      className="abt-his-btn"
+      onMouseEnter={(e) => (
+        (e.target.style.backgroundColor = "#870be7"),
+        (e.target.style.color = "#000")
+      )}
+      onMouseLeave={(e) => (
+        (e.target.style.backgroundColor = "transparent"),
+        (e.target.style.color = "#870be7")
+      )}
+    >
+      {data.buttonText}
+    </Button> */}
+                </Card.Body>
+              </Col>
+            </Row>
           </Card>
         ))}
       </Container>

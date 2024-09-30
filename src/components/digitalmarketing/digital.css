@@ -2,9 +2,9 @@
     width: 100%;
     height: 100%;
     padding: 20px;
-    color: white;
-    background: linear-gradient(#212121, #212121) padding-box,
-                linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+    color: rgb(0, 0, 0);
+    background: linear-gradient(#f6f6f6, #f5f4f4) padding-box,
+                linear-gradient(360deg, transparent -100%,#e81cff, #40c9ff) border-box;
     border: 2px solid transparent;
     border-radius: 16px;
     display: flex;
@@ -17,4 +17,9 @@
 
   .branding-card:hover {
     /* rotate: 8deg; */
+  }
+
+  .media-card{
+    border: 0;
+    border-radius: unset;
   }

@@ -1,11 +1,12 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import {
   Container,
   Nav,
   Navbar,
-  Offcanvas,
   NavDropdown,
+  Offcanvas,
 } from "react-bootstrap";
+import { FaCaretDown } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 
 function Header() {
@@ -17,7 +18,7 @@ function Header() {
 
   const handleScroll = () => {
     if (window.scrollY > 50) {
-      setNavbarColor("#1a1a1a"); //26012f
+      setNavbarColor("#1a1a1a");
     } else {
       setNavbarColor("transparent");
     }
@@ -80,43 +81,28 @@ function Header() {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                {/* <Nav.Link
-                  as={Link}
-                  to="/"
-                  style={{ color: "white" }}
-                  onClick={handleClose}
-                >
-                  Home
-                </Nav.Link> */}
-                <Nav.Link
-                  as={Link}
+                <NavLink
                   to="/aboutus"
-                  // href="about-section"
-                  style={{ color: "white" }}
+                  className="nav-link"
                   onClick={handleClose}
                 >
                   About
-                </Nav.Link>
-                <Nav.Link
-                  as={Link}
+                </NavLink>
+                <NavLink
                   to="/services"
-                  style={{ color: "white" }}
+                  className="nav-link"
                   onClick={handleClose}
                 >
-                  Services
-                </Nav.Link>
-                {/* <Nav.Link
-                  as={Link}
-                  to="/#our-clients"
-                  style={{ color: "white" }}
-                  onClick={handleClose}
-                >
-                  Our Clients
-                </Nav.Link> */}
+                  Products
+                </NavLink>
                 <NavDropdown
-                  title="Services"
+                  title={
+                    <span style={{ color: "white" }}>
+                      Services <FaCaretDown style={{ marginLeft: "5px" }} />
+                    </span>
+                  }
                   id="basic-nav-dropdown"
-                  style={{ color: "white" }}
+                  className="custom-dropdown"
                 >
                   <NavDropdown.Item as={NavLink} to="/services/webdevelopment">
                     Web Development
@@ -132,14 +118,13 @@ function Header() {
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
                 </NavDropdown>
-                <Nav.Link
-                  as={Link}
+                <NavLink
                   to="/contact"
-                  style={{ color: "white" }}
+                  className="nav-link"
                   onClick={handleClose}
                 >
                   Contact
-                </Nav.Link>
+                </NavLink>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>

@@ -31,7 +31,23 @@ function TechStack({ clientLogoRef }) {
       title: "Client 5",
     },
     {
-      logo: "/img/tech/mongodb.svg",
+      logo: "/img/tech/xjs.svg",
+      title: "Client 4",
+    },
+    {
+      logo: "/img/tech/flutter.svg",
+      title: "Client 4",
+    },
+    {
+      logo: "/img/tech/angular.svg",
+      title: "Client 4",
+    },
+    {
+      logo: "/img/tech/vue.svg",
+      title: "Client 4",
+    },
+    {
+      logo: "/img/tech/dj.svg",
       title: "Client 4",
     },
   ];
@@ -78,11 +94,11 @@ function TechStack({ clientLogoRef }) {
       className="py-5"
     >
       <Container className="mt-5">
-        <div data-aos="fade-right">
+        {/* <div data-aos="fade-right">
           <h2 className="section-title" style={{ color: "black" }}>
             Tech Stack
           </h2>
-        </div>
+        </div> */}
         <div
           className="container experience-stats"
           style={{ background: "transparent" }}

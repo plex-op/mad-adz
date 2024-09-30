@@ -23,16 +23,8 @@ function TechStack({ clientLogoRef }) {
       title: "Client 3",
     },
     {
-      logo: "/img/tech/bootstrap.svg",
-      title: "Client 4",
-    },
-    {
-      logo: "/img/tech/react.svg",
-      title: "Client 5",
-    },
-    {
-      logo: "/img/tech/mongodb.svg",
-      title: "Client 4",
+      logo: "/img/tech/coreld.png",
+      title: "Client 3",
     },
   ];
 
@@ -78,11 +70,11 @@ function TechStack({ clientLogoRef }) {
       className="py-5"
     >
       <Container className="mt-5">
-        <div data-aos="fade-right">
+        {/* <div data-aos="fade-right">
           <h2 className="section-title" style={{ color: "black" }}>
             Tech Stack
           </h2>
-        </div>
+        </div> */}
         <div
           className="container experience-stats"
           style={{ background: "transparent" }}

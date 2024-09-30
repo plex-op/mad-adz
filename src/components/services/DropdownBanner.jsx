@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./service.css";
 
 const DropdownBanner = ({
@@ -37,22 +38,35 @@ const DropdownBanner = ({
 
           {/* Content Column */}
           <Col xs={12} md={6} className="home-content order-2 order-md-1 mt-5">
-            <h2 style={{ fontSize: "60px", color: "#fff" }}>{heading}</h2>
-            <p style={{ color: "white" }}>{description}</p>
-            <Button
-              variant="primary"
-              className="home-btn mb-5"
+            <h2
               style={{
-                background: "#333",
                 color: "#fff",
-                padding: "15px 25px",
-                border: "none",
-                borderRadius: "50px",
-                cursor: "pointer",
+                textAlign: "left",
               }}
             >
-              {buttonText}
-            </Button>
+              {heading}
+            </h2>
+            <p style={{ color: "white", textAlign: "justify" }}>
+              {description}
+            </p>
+            <Link to="https://wa.me/1234567890">
+              {" "}
+              {/* Replace with your WhatsApp link */}
+              <Button
+                variant="primary"
+                className="home-btn mb-5"
+                style={{
+                  background: "#333",
+                  color: "#fff",
+                  padding: "15px 25px",
+                  border: "none",
+                  borderRadius: "50px",
+                  cursor: "pointer",
+                }}
+              >
+                {buttonText}
+              </Button>
+            </Link>
           </Col>
         </Row>
       </Container>

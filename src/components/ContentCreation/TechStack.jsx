@@ -7,32 +7,28 @@ import "slick-carousel/slick/slick-theme.css";
 function TechStack({ clientLogoRef }) {
   const clients = [
     {
-      logo: "/img/tech/adobe-illustrator.svg",
+      logo: "/img/tech/afe.svg",
       title: "Client 1",
     },
     {
-      logo: "/img/tech/adobe-photoshop.svg",
+      logo: "/img/tech/pp.svg",
       title: "Client 2",
     },
     {
-      logo: "/img/tech/figma.svg",
+      logo: "/img/tech/capcut.svg",
       title: "Client 3",
     },
     {
-      logo: "/img/tech/canva.svg",
+      logo: "/img/tech/flimora.svg",
       title: "Client 3",
     },
     {
-      logo: "/img/tech/bootstrap.svg",
+      logo: "/img/tech/lightw.png",
       title: "Client 4",
     },
     {
-      logo: "/img/tech/react.svg",
+      logo: "/img/tech/finalcut.png",
       title: "Client 5",
-    },
-    {
-      logo: "/img/tech/mongodb.svg",
-      title: "Client 4",
     },
   ];
 
@@ -78,11 +74,11 @@ function TechStack({ clientLogoRef }) {
       className="py-5"
     >
       <Container className="mt-5">
-        <div data-aos="fade-right">
+        {/* <div data-aos="fade-right">
           <h2 className="section-title" style={{ color: "black" }}>
             Tech Stack
           </h2>
-        </div>
+        </div> */}
         <div
           className="container experience-stats"
           style={{ background: "transparent" }}

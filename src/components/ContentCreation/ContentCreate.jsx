@@ -5,45 +5,35 @@ import { FaCheck } from "react-icons/fa"; // Checkmark icon
 // Sample data
 const servicesData = [
   {
-    img: "/img/webdev.png",
-    title: "Web & App Development",
-    description: "Transforming ideas into unified web and app Development",
+    img: "/img/dropdownsev/cc.jpg",
+    title: "Content Creation",
+    description: "Elevate Your Brand with Engaging Digital Solutions",
     points: [
-      "Recommended for bulk hiring (5+ roles)",
-      "Exclusive Search",
-      "Cross-functional scalability",
-      "Fixed Pricing Model",
-      "Dedicated Team of recruiters",
-      "Employer Brand Representation",
-      "End-to-end recruitment process management",
+      "Engaging Storytelling: Craft compelling narratives that capture your audience's attention and convey your message effectively.",
+      "Targeted Themes: Develop video content that aligns with trending topics and resonates with your target audience.",
+      "Visual Appeal: Utilize high-quality visuals, graphics, and animations to enhance the viewer's experience and keep them engaged.",
+      "Call to Action: Incorporate strong calls to action that encourage viewers to engage further with your content or brand.",
     ],
   },
   {
-    img: "/img/uiux.jpg",
-    title: "UI / UX Designing",
-    description: "Transforming user feedback into impactful design",
+    img: "/img/dropdownsev/cw.jpg",
+    title: "Content Writing",
+    description: "Compelling Copy That Converts",
     points: [
-      "Recommended for bulk hiring (5+ roles)",
-      "Exclusive Search",
-      "Cross-functional scalability",
-      "Fixed Pricing Model",
-      "Dedicated Team of recruiters",
-      "Employer Brand Representation",
-      "End-to-end recruitment process management",
+      "Script Development: Create well-structured scripts that outline key messages, tone, and pacing to ensure a smooth delivery.",
+      "Audience-Centric Approach: Tailor content to meet the needs and preferences of your target audience, enhancing relatability and impact.",
+      "Keyword Optimization: Integrate relevant keywords naturally within the script to improve search visibility when shared online.",
+      "Concise Messaging: Focus on clear and concise messaging to maintain viewer interest and convey information effectively.",
     ],
   },
   {
-    img: "/img/digmarketing.jpg",
-    title: "Digital & SEO Solutions",
-    description: "Connecting businesses with customers in the digital realm",
+    img: "/img/dropdownsev/ve.avif",
+    title: "Video Making and Editing",
+    description: "Captivate Your Audience with Stunning Visuals",
     points: [
-      "Recommended for bulk hiring (5+ roles)",
-      "Exclusive Search",
-      "Cross-functional scalability",
-      "Fixed Pricing Model",
-      "Dedicated Team of recruiters",
-      "Employer Brand Representation",
-      "End-to-end recruitment process management",
+      "Promotional Videos: Create captivating promotional videos that showcase your products or services, increasing brand awareness.",
+      "Social Media Videos: Engage your audience with short, impactful videos designed specifically for platforms like Instagram, Facebook, and Youtube.",
+      "Video Editing: Enhance your raw footage with professional editing services, including color correction, sound design, and visual effects.",
     ],
   },
 ];
@@ -132,7 +122,7 @@ const ContentCreate = () => {
                   </li>
                 ))}
               </ul>
-              <Button
+              {/* <Button
                 variant="primary"
                 className="home-btn"
                 style={{
@@ -146,7 +136,7 @@ const ContentCreate = () => {
                 }}
               >
                 Learn more
-              </Button>
+              </Button> */}
             </Col>
           </Row>
         ))}

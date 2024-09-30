@@ -5,45 +5,47 @@ import { FaCheck } from "react-icons/fa"; // Checkmark icon
 // Sample data
 const servicesData = [
   {
-    img: "/img/webdev.png",
-    title: "Web & App Development",
-    description: "Transforming ideas into unified web and app Development",
+    img: "/img/uiux.jpg",
+    title: "UI/UX Design Services for Web and Mobile Apps",
+    description:
+      "We specialize in crafting intuitive and visually captivating UI/UX design solutions that enhance user engagement and seamlessly connect users with your brand across digital platforms.",
     points: [
-      "Recommended for bulk hiring (5+ roles)",
-      "Exclusive Search",
-      "Cross-functional scalability",
-      "Fixed Pricing Model",
-      "Dedicated Team of recruiters",
-      "Employer Brand Representation",
-      "End-to-end recruitment process management",
+      "Comprehensive User Research & Analysis",
+      "Detailed Wireframing & Prototyping Services",
+      "Professional User Interface (UI) Design",
+      "Optimized User Experience (UX) Design",
+      "Responsive and Adaptive Web Design",
+      "Interactive Design for Enhanced Engagement",
+      "Strategic Information Architecture (IA)",
     ],
   },
   {
-    img: "/img/uiux.jpg",
-    title: "UI / UX Designing",
-    description: "Transforming user feedback into impactful design",
+    img: "/img/webdev.png",
+    title: "Expert Web Development Services",
+    description:
+      "Transforming innovative ideas into high-performing, seamless websites that provide exceptional user experiences and drive business growth in the digital landscape.",
     points: [
-      "Recommended for bulk hiring (5+ roles)",
-      "Exclusive Search",
-      "Cross-functional scalability",
-      "Fixed Pricing Model",
-      "Dedicated Team of recruiters",
-      "Employer Brand Representation",
-      "End-to-end recruitment process management",
+      "Custom Website Development Tailored to Your Needs",
+      "E-commerce Development for Online Success",
+      "Robust CMS Development for Easy Management",
+      "Seamless API Integration for Enhanced Functionality",
+      "Progressive Web Apps (PWA) for Superior User Experience",
+      "Ongoing Web Maintenance & Support Services",
     ],
   },
   {
     img: "/img/digmarketing.jpg",
-    title: "Digital & SEO Solutions",
-    description: "Connecting businesses with customers in the digital realm",
+    title: "Comprehensive App Development Services",
+    description:
+      "Transforming groundbreaking ideas into powerful, high-performing mobile applications for iOS, Android, and cross-platform environments, ensuring an exceptional user experience.",
     points: [
-      "Recommended for bulk hiring (5+ roles)",
-      "Exclusive Search",
-      "Cross-functional scalability",
-      "Fixed Pricing Model",
-      "Dedicated Team of recruiters",
-      "Employer Brand Representation",
-      "End-to-end recruitment process management",
+      "Custom Mobile App Development for Unique Solutions",
+      "Expert iOS App Development for Apple Devices",
+      "Professional Android App Development",
+      "Cross-Platform App Development for Wider Reach",
+      "Seamless App Integration with Third-Party Services",
+      "Enhanced App Security and Compliance Standards",
+      "Reliable App Maintenance and Support Services",
     ],
   },
 ];
@@ -132,7 +134,7 @@ const ServiceSection = () => {
                   </li>
                 ))}
               </ul>
-              <Button
+              {/* <Button
                 variant="primary"
                 className="home-btn"
                 style={{
@@ -146,7 +148,7 @@ const ServiceSection = () => {
                 }}
               >
                 Learn more
-              </Button>
+              </Button> */}
             </Col>
           </Row>
         ))}

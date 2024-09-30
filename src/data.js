@@ -69,16 +69,12 @@ export const ServiceBannerData = [
 
 export const historyContent = [
   {
-    title: "Our Service",
+    title: "Our Team",
     description: [
-      "Started in 2000 with a mission to innovate Expanded services across multiple industries.",
-      "Expanded services across multiple industries Pioneered new technologies for better service.",
-      "Pioneered new technologies for better service Pioneered new technologies for better service",
-      "Started in 2000 with a mission to innovate Pioneered new technologies for better service",
-      "Expanded services across multiple industries Pioneered new technologies for better service",
-      "Pioneered new technologies for better service Pioneered new technologies for better service",
+      "Our team consists of dedicated professionals with a passion for innovation and excellence. We collaborate seamlessly to bring creative solutions to life, ensuring every project is delivered with precision and expertise. In the field of IT services, we specialize in web app design, crafting intuitive and engaging platforms that drive user satisfaction. Our expertise in digital marketing allows us to create strategies that enhance brand visibility and boost online presence. Whether designing sleek, functional websites or executing targeted advertising campaigns, we work to empower businesses in the digital landscape.",
     ],
     buttonText: "Learn More",
+    imageUrl: "/img/team.avif",
   },
 ];
 
