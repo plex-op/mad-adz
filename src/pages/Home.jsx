@@ -28,8 +28,8 @@ const Home = () => {
       <AboutUsSection />
       <WhyUsSection />
       <OurClients />
-      <BackToTop />
       <WhatsAppButton />
+      <BackToTop />
     </div>
   );
 };

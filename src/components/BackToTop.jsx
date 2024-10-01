@@ -40,11 +40,11 @@ const styles = {
     position: "fixed",
     bottom: "100px", // Place it higher to avoid overlap with WhatsApp
     right: "30px", // Same side as WhatsApp, but further up
-    width: "50px",
-    height: "50px",
+    width: "30px",
+    height: "30px",
     backgroundColor: "#870be7", // Custom color
     color: "#fff",
-    borderRadius: "50%",
+    // borderRadius: "50%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",

@@ -1,23 +1,53 @@
+import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import youtubeIcon from "/img/svg/yt-icon.svg";
-import instagramIcon from "/img/svg/insta-icon.svg";
-import linkedinIcon from "/img/svg/link-icon.svg";
-import { FaEnvelope, FaPhone } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { IoPhonePortraitOutline } from "react-icons/io5";
+import { FiMail } from "react-icons/fi";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+} from "react-icons/fa";
+import { RiTwitterXFill } from "react-icons/ri";
+import "./footer.css";
 
 const Footer = () => {
+  const [posts, setPosts] = useState([]);
+  const accessToken = "YOUR_ACCESS_TOKEN"; // Replace with your access token
+  const userId = "YOUR_USER_ID"; // Replace with your user ID
+
+  useEffect(() => {
+    const fetchInstagramPosts = async () => {
+      try {
+        const response = await fetch(
+          `https://graph.instagram.com/${userId}/media?fields=id,media_url&access_token=${accessToken}`
+        );
+        const data = await response.json();
+        setPosts(data.data.slice(0, 9)); // Get the latest 9 posts
+      } catch (error) {
+        console.error("Error fetching Instagram posts:", error);
+      }
+    };
+
+    fetchInstagramPosts();
+  }, [accessToken, userId]);
+
   return (
-    <footer className="footer text-light py-5" id="footer">
+    <footer
+      className="footer text-light py-5 footer-styling"
+      style={{ backgroundColor: "#1a1a1a" }}
+    >
       <Container>
         <Row className="mb-4">
-          <Col md={6} className="text-center text-md-start">
-            <div className="social-icons mb-5 d-flex flex-column g-10 footer-card">
+          <Col md={3} className="text-md-start">
+            <div className="social-icons  d-flex flex-column">
               <div className="card1"></div>
               <div className="card2"></div>
               <div className="p">
                 <img
                   src="/img/madadz.png"
-                  alt=""
+                  alt="MadAdz Logo"
                   width={"100px"}
                   className="mb-3"
                 />
@@ -31,7 +61,7 @@ const Footer = () => {
                   className="mb-3"
                   style={{ fontSize: "14px", fontWeight: "500" }}
                 >
-                  <FaPhone style={{ marginRight: "5px" }} />
+                  <IoPhonePortraitOutline style={{ marginRight: "5px" }} />
                   <a
                     href="tel:+91 6380125351"
                     style={{ textDecoration: "none", color: "inherit" }}
@@ -43,7 +73,7 @@ const Footer = () => {
                   className="mb-3"
                   style={{ fontSize: "14px", fontWeight: "500" }}
                 >
-                  <FaEnvelope style={{ marginRight: "5px" }} />
+                  <FiMail style={{ marginRight: "5px" }} />
                   <a
                     href="mailto:karthikkn877@gmail.com"
                     style={{ textDecoration: "none", color: "inherit" }}
@@ -51,98 +81,85 @@ const Footer = () => {
                     madadz@.co
                   </a>
                 </p>
-                <div className="d-flex align-items-center justify-content-center">
-                  <a
-                    href="#"
-                    className="text-light mx-2 d-flex align-items-center"
-                  >
-                    <img
-                      src={youtubeIcon}
-                      alt="YouTube"
-                      style={{
-                        width: "24px",
-                        height: "24px",
-                        marginRight: "8px",
-                      }}
-                    />
+                <div className="d-flex align-items-start justify-content-start mb-5 social-icons-container">
+                  <a href="#" className="text-light social-icon">
+                    <FaYoutube />
                   </a>
-                  <a
-                    href="#"
-                    className="text-light mx-2 d-flex align-items-center"
-                  >
-                    <img
-                      src={instagramIcon}
-                      alt="Instagram"
-                      style={{
-                        width: "24px",
-                        height: "24px",
-                        marginRight: "8px",
-                      }}
-                    />
+                  <a href="#" className="text-light social-icon">
+                    <FaInstagram />
                   </a>
-                  <a
-                    href="#"
-                    className="text-light mx-2 d-flex align-items-center"
-                  >
-                    <img
-                      src={linkedinIcon}
-                      alt="LinkedIn"
-                      style={{
-                        width: "24px",
-                        height: "24px",
-                        marginRight: "8px",
-                      }}
-                    />
+                  <a href="#" className="text-light social-icon">
+                    <FaLinkedinIn />
+                  </a>
+                  <a href="#" className="text-light social-icon">
+                    <FaFacebookF />
+                  </a>
+                  <a href="#" className="text-light social-icon">
+                    <RiTwitterXFill />
                   </a>
                 </div>
               </div>
             </div>
           </Col>
-          <Col md={2} className="text-start text-md-start hover-link">
-            <h5 className="" style={{ fontSize: "22px", color: "#870be7" }}>
+
+          {/* Quick Links */}
+          <Col md={3} className="text-start text-md-start hover-link">
+            <h5
+              className="footer-title"
+              style={{
+                color: "#fff",
+                fontWeight: "bold",
+                marginBottom: "20px",
+              }}
+            >
               QUICK LINKS
             </h5>
-            <ul className="list-unstyled">
-              <li>
+            <ul className="list-unstyled footer-link">
+              <li style={{ marginBottom: "24px" }}>
                 <Link
                   to="/"
-                  className="text-light"
-                  onClick={() => window.scrollTo(0, 0)} /* Scroll to top */
+                  className="text-light footer-link"
+                  style={{ color: "#d3d3d3", textDecoration: "none" }}
+                  onClick={() => window.scrollTo(0, 0)}
                 >
                   Home
                 </Link>
               </li>
-              <li>
+              <li style={{ marginBottom: "24px" }}>
                 <Link
                   to="/services"
                   className="text-light"
+                  style={{ color: "#d3d3d3", textDecoration: "none" }}
                   onClick={() => window.scrollTo(0, 0)}
                 >
                   Services
                 </Link>
               </li>
-              <li>
+              <li style={{ marginBottom: "24px" }}>
                 <Link
                   to="/aboutus"
                   className="text-light"
+                  style={{ color: "#d3d3d3", textDecoration: "none" }}
                   onClick={() => window.scrollTo(0, 0)}
                 >
                   About
                 </Link>
               </li>
-              <li>
+              <li style={{ marginBottom: "24px" }}>
                 <Link
                   to="/ourworks"
                   className="text-light"
+                  style={{ color: "#d3d3d3", textDecoration: "none" }}
                   onClick={() => window.scrollTo(0, 0)}
                 >
                   Our Clients
                 </Link>
               </li>
-              <li>
+              <li style={{ marginBottom: "24px" }}>
                 <Link
                   to="/ourworks"
                   className="text-light"
+                  style={{ color: "#d3d3d3", textDecoration: "none" }}
                   onClick={() => window.scrollTo(0, 0)}
                 >
                   Blog
@@ -151,42 +168,54 @@ const Footer = () => {
             </ul>
           </Col>
 
-          <Col md={2} className="text-start text-md-start hover-link">
-            <h5 className="" style={{ fontSize: "22px", color: "#870be7" }}>
+          {/* Services */}
+          <Col md={3} className="text-start text-md-start hover-link">
+            <h5
+              className="footer-title"
+              style={{
+                color: "#fff",
+                fontWeight: "bold",
+                marginBottom: "20px",
+              }}
+            >
               SERVICES
             </h5>
             <ul className="list-unstyled">
-              <li>
+              <li style={{ marginBottom: "24px" }}>
                 <Link
                   to="/services/webdevelopment"
                   className="text-light"
+                  style={{ color: "#d3d3d3", textDecoration: "none" }}
                   onClick={() => window.scrollTo(0, 0)}
                 >
                   Web Development
                 </Link>
               </li>
-              <li>
+              <li style={{ marginBottom: "24px" }}>
                 <Link
                   to="/services/designing"
                   className="text-light"
+                  style={{ color: "#d3d3d3", textDecoration: "none" }}
                   onClick={() => window.scrollTo(0, 0)}
                 >
                   Designing
                 </Link>
               </li>
-              <li>
+              <li style={{ marginBottom: "24px" }}>
                 <Link
                   to="/services/branding"
                   className="text-light"
+                  style={{ color: "#d3d3d3", textDecoration: "none" }}
                   onClick={() => window.scrollTo(0, 0)}
                 >
                   Branding
                 </Link>
               </li>
-              <li>
+              <li style={{ marginBottom: "24px" }}>
                 <Link
                   to="/services/contentcreation"
                   className="text-light"
+                  style={{ color: "#d3d3d3", textDecoration: "none" }}
                   onClick={() => window.scrollTo(0, 0)}
                 >
                   Content Creation
@@ -195,32 +224,84 @@ const Footer = () => {
             </ul>
           </Col>
 
-          <Col md={2} className="text-start text-md-start hover-link">
-            <h5 className="" style={{ fontSize: "22px", color: "#870be7" }}>
+          {/* Others */}
+          <Col md={3} className="text-start text-md-start hover-link">
+            <h5
+              className="footer-title"
+              style={{
+                color: "#fff",
+                fontWeight: "900",
+                marginBottom: "20px",
+              }}
+            >
               OTHERS
             </h5>
             <ul className="list-unstyled fs-6">
-              <li className="d-flex align-items-center">
+              <li
+                className="d-flex align-items-center"
+                style={{ marginBottom: "24px" }}
+              >
                 <Link
                   to="/contact"
                   className="text-light"
-                  onClick={() => window.scrollTo(0, 0)} /* Scroll to top */
+                  style={{ color: "#d3d3d3", textDecoration: "none" }}
+                  onClick={() => window.scrollTo(0, 0)}
                 >
                   Contact
                 </Link>
               </li>
-              <li className="d-flex align-items-center">
+              <li
+                className="d-flex align-items-center"
+                style={{ marginBottom: "24px" }}
+              >
                 <Link
                   to="/contact"
                   className="text-light"
-                  onClick={() => window.scrollTo(0, 0)} /* Scroll to top */
+                  style={{ color: "#d3d3d3", textDecoration: "none" }}
+                  onClick={() => window.scrollTo(0, 0)}
                 >
                   Privacy Policy
                 </Link>
               </li>
             </ul>
           </Col>
+
+          {/* Instagram Feed */}
+          <Col md={3} className="text-start d-none">
+            <h5 className="footer-title" style={{ color: "#fff" }}>
+              Instagram Feed
+            </h5>
+            <div className="d-flex justify-content-center align-items-center">
+              <div className="instagram-grid d-flex flex-wrap">
+                {posts.length > 0 ? (
+                  posts.map((post) => (
+                    <a
+                      href={`https://www.instagram.com/virtualindiaa?igsh=d2dxbjlhZTlxNzI4${post.id}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      key={post.id}
+                      style={{
+                        width: "70px",
+                        height: "70px",
+                        margin: "5px",
+                        backgroundImage: `url(${post.media_url})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                      }}
+                    />
+                  ))
+                ) : (
+                  <p>Loading...</p>
+                )}
+              </div>
+            </div>
+          </Col>
         </Row>
+
+        {/* Horizontal Line */}
+        <hr style={{ borderColor: "#fff", opacity: "0.2" }} />
+
+        {/* Copyright and Footer Bottom */}
         <Row>
           <Col md={12} className="text-center">
             <p style={{ fontSize: "14px" }}>Copyright © 2024 MadAdz</p>
