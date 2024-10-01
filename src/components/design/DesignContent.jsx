@@ -9,7 +9,6 @@ const DesignContent = () => {
     "Brand Identity Design",
     "Print Design",
     "Social Media Posters",
-    "Logo Design",
     "Web Graphics",
     "Packaging Design",
     "Illustration Services",
@@ -51,7 +50,7 @@ const DesignContent = () => {
 
           <Col md={6}>
             <div className="d-flex align-items-center order-1 order-md-2">
-              <img src="/img/webdev.png" alt="" style={{ width: "100%" }} />
+              <img src="/img/gd.png" alt="" style={{ width: "100%" }} />
             </div>
           </Col>
         </Row>

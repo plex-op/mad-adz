@@ -4,11 +4,11 @@ import "./gallery.css"; // Assuming you'll put your CSS in this file
 
 const DesignCard = () => {
   const images = [
-    "/img/ches.jpg",
-    "/img/ches.jpg",
-    "/img/ches.jpg",
-    "/img/ches.jpg",
-    "/img/ches.jpg",
+    "/img/graposter.JPG",
+    "/img/vcard.JPG",
+    "/img/logom.JPG",
+    "/img/bb.jpg",
+    "/img/vibroucher.jpg",
   ];
 
   return (
