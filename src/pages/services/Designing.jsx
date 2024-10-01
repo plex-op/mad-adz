@@ -3,6 +3,7 @@ import DropdownBanner from "../../components/services/DropdownBanner";
 import DesignCard from "../../components/design/DesignCard";
 import DesignContent from "../../components/design/DesignContent";
 import TechStack from "../../components/design/TechStack";
+import BackToTop from "../../components/BackToTop";
 
 const Designing = () => {
   return (
@@ -17,6 +18,7 @@ const Designing = () => {
       <DesignContent />
       <DesignCard />
       <TechStack />
+      <BackToTop />
     </div>
   );
 };

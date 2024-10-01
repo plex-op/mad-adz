@@ -2,6 +2,7 @@ import React from "react";
 import DropdownBanner from "../../components/services/DropdownBanner";
 import ContentCreate from "../../components/ContentCreation/ContentCreate";
 import TechStack from "../../components/ContentCreation/TechStack";
+import BackToTop from "../../components/BackToTop";
 
 const ContentCreation = () => {
   return (
@@ -16,6 +17,7 @@ const ContentCreation = () => {
       />
       <ContentCreate />
       <TechStack />
+      <BackToTop />
     </div>
   );
 };

@@ -150,6 +150,31 @@ h6 {
 }
 
 
+/* custom navbar dropdown style */
+
+/* Custom Dropdown Styles */
+.custom-dropdown .dropdown-item {
+  background-color: transparent; /* No background */
+  color: rgb(0, 0, 0); /* Default text color */
+  font-size: 16px;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect */
+.custom-dropdown .dropdown-item:hover {
+  background-color: #870be7; /* Custom hover background color */
+  color: white; /* Hover text color */
+}
+
+/* Active item */
+.custom-dropdown .dropdown-item.active {
+  background-color: #870be7; /* Custom active background */
+  color: white; /* Custom active text color */
+  border: none; /* Remove border on active */
+}
+
+
 
 
 
@@ -282,7 +307,7 @@ h6 {
 }
 
 /* footer section */
-footer {
+#footer {
   background-color: #1a1a1a;
   color: #e5e5e5;
   position: relative;
@@ -290,17 +315,6 @@ footer {
 }
 
 
-footer .social-icons a {
-  color: #ffffff;
-  font-size: 1.1rem;
-  display: inline-block;
-  margin-right: 1rem;
-  text-decoration: none;
-}
-
-footer .social-icons a:hover {
-  color: #ff7b00;
-}
 
 footer ul {
   padding: 0;
@@ -311,41 +325,28 @@ footer ul li {
   margin-bottom: 0.5rem;
 }
 
-footer ul li a {
-  color: #e5e5e5;
-  text-decoration: none;
-  font-family: "kreadon-regular";
-}
 
-footer ul li a:hover {
-  color: #ff7b00;
-}
-
-footer p {
-  margin: 0;
-  color: #e5e5e5;
-  /* font-size: 26px; */
-  /* font-family: "kreadon-extrabold"; */
-}
 
 /* footer */
-
-.footer a {
-  color: #ffffff; /* Default link color */
-  text-decoration: none; /* Remove underline */
-  transition: color 0.3s ease; /* Smooth transition for the hover effect */
+#footer .hover-link a {
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.footer a:hover {
-  color: red; /* Change link color to red on hover */
+#footer .hover-link a:hover {
+  color: red; /* Change the color on hover */
+  transform: scale(1.1); /* Add zoom effect */
 }
+
+
 
 
 
 /* #870be7 */
 
 .footer-card  {
-  max-width: 350px; 
+  max-width: 400px; 
   background-color: #1a1a1a;
   background: linear-gradient(to top right, rgb(74, 74, 74), rgb(117, 117, 118));
   display: flex;
@@ -431,3 +432,106 @@ footer p {
     opacity: 1;
   }
 } */
+
+
+/* button common style */
+
+
+.btn-common {
+  --border-color: linear-gradient(-45deg, #f7f7f7, #7e03aa, #00fffb);
+  --border-width: 0.125em;
+  --curve-size: 0.5em;
+  --blur: 30px;
+  --bg: transparent;
+  --color: #ffffff;
+  color: var(--color);
+  cursor: pointer;
+  /* use position: relative; so that BG is only for .btn */
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: 0.5em 1.5em;
+  font-size: 17px;
+  border: 0;
+  text-transform: uppercase;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+  clip-path: polygon(
+    /* Top-left */ 0% var(--curve-size),
+    var(--curve-size) 0,
+    /* top-right */ 100% 0,
+    100% calc(100% - var(--curve-size)),
+    /* bottom-right 1 */ calc(100% - var(--curve-size)) 100%,
+    /* bottom-right 2 */ 0 100%
+  );
+  transition: color 250ms;
+  text-decoration: none;
+}
+
+.btn-common::after,
+.btn-common::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.btn-common::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 5s ease infinite;
+  z-index: -2;
+}
+
+@keyframes move-bg7234 {
+  0% {
+    background-position: 31% 0%;
+  }
+
+  50% {
+    background-position: 70% 100%;
+  }
+
+  100% {
+    background-position: 31% 0%;
+  }
+}
+
+.btn-common::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+    /* Top-left */ var(--border-width)
+      calc(var(--curve-size) + var(--border-width) * 0.5),
+    calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */ var(--border-width) calc(100% - var(--border-width))
+  );
+  transition: clip-path 500ms;
+}
+
+.btn-common:where(:hover, :focus)::after {
+  clip-path: polygon(
+    /* Top-left */ calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    calc(100% - var(--border-width)) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width))
+  );
+  transition: 200ms;
+}
+
+.btn-common:where(:hover, :focus) {
+  color: #fff;
+}

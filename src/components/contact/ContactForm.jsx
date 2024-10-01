@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Row, Button } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { RiWhatsappFill } from "react-icons/ri";
 import { MdEmail, MdLocationOn } from "react-icons/md";
 import {
@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import Form from "react-bootstrap/Form";
 import "./contact.css";
+import { Link } from "react-router-dom";
 
 const ContactForm = () => {
   return (
@@ -221,23 +222,12 @@ const ContactForm = () => {
                   />
                 </Form.Group>
 
-                <div className="d-flex justify-content-between align-items-center mt-3">
+                <div className="d-flex justify-content-center align-items-center mt-3">
                   <div
                     className="g-recaptcha"
                     data-sitekey="your_site_key"
                   ></div>
-                  <Button
-                    variant="primary"
-                    style={{
-                      backgroundColor: "transparent",
-                      border: "1px solid #870be7",
-                      borderRadius: "25px",
-                      padding: "10px 30px",
-                      fontSize: "16px",
-                    }}
-                  >
-                    Send Message
-                  </Button>
+                  <Link className="btn-common">Send Message</Link>
                 </div>
               </Form>
             </div>

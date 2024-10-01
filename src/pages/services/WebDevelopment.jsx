@@ -2,6 +2,7 @@ import React from "react";
 import DropdownBanner from "../../components/services/DropdownBanner";
 import ServiceSection from "../../components/services/ServicesSection";
 import TechStack from "../../components/services/TechStack";
+import BackToTop from "../../components/BackToTop";
 
 const WebDevelopment = () => {
   return (
@@ -15,6 +16,7 @@ const WebDevelopment = () => {
       />
       <ServiceSection />
       <TechStack />
+      <BackToTop />
     </div>
   );
 };

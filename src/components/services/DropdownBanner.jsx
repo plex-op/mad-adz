@@ -54,7 +54,7 @@ const DropdownBanner = ({
               {/* Replace with your WhatsApp link */}
               <Button
                 variant="primary"
-                className="home-btn mb-5"
+                className="home-btn mb-5 btn-common"
                 style={{
                   background: "#333",
                   color: "#fff",

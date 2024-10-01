@@ -3,6 +3,7 @@ import DropdownBanner from "../../components/services/DropdownBanner";
 import DigitalMarket from "../../components/digitalmarketing/DigitalMarket";
 import DigitalCard from "../../components/digitalmarketing/DigitalCard";
 import DigitalMedia from "../../components/digitalmarketing/DigitalMedia";
+import BackToTop from "../../components/BackToTop";
 
 const Branding = () => {
   return (
@@ -17,6 +18,7 @@ const Branding = () => {
       {/* <DigitalMarket /> */}
       <DigitalCard />
       <DigitalMedia />
+      <BackToTop />
     </div>
   );
 };

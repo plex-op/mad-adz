@@ -51,7 +51,7 @@ function Header() {
             }}
             className="navbar-content nav-bar-section"
           >
-            <Link to="/">
+            <Link to="/" onClick={() => window.scrollTo(0, 0)}>
               <img src="/img/madadz.png" alt="" width={"100px"} />
             </Link>
           </Navbar.Brand>
@@ -90,7 +90,10 @@ function Header() {
                   to="/aboutus"
                   className="nav-link"
                   style={{ color: "white" }} // Ensure white text
-                  onClick={handleClose}
+                  onClick={() => {
+                    handleClose(); // Close the menu
+                    window.scrollTo(0, 0); // Scroll to the top
+                  }}
                 >
                   About
                 </NavLink>
@@ -101,43 +104,58 @@ function Header() {
                     </span>
                   }
                   id="basic-nav-dropdown"
-                  className="custom-dropdown"
+                  className="custom-dropdown" /* Custom class */
                 >
                   <NavDropdown.Item
                     as={NavLink}
                     to="/services/webdevelopment"
-                    style={{ color: "black" }}
+                    onClick={() => {
+                      handleClose();
+                      window.scrollTo(0, 0);
+                    }}
                   >
                     Web Development
                   </NavDropdown.Item>
                   <NavDropdown.Item
                     as={NavLink}
                     to="/services/branding"
-                    style={{ color: "black" }}
+                    onClick={() => {
+                      handleClose();
+                      window.scrollTo(0, 0);
+                    }}
                   >
                     Branding
                   </NavDropdown.Item>
                   <NavDropdown.Item
                     as={NavLink}
                     to="/services/designing"
-                    style={{ color: "black" }}
+                    onClick={() => {
+                      handleClose();
+                      window.scrollTo(0, 0);
+                    }}
                   >
                     Designing
                   </NavDropdown.Item>
                   <NavDropdown.Item
                     as={NavLink}
                     to="/services/contentcreation"
-                    style={{ color: "black" }}
+                    onClick={() => {
+                      handleClose();
+                      window.scrollTo(0, 0);
+                    }}
                   >
                     Content Creation
                   </NavDropdown.Item>
-                  <NavDropdown.Divider />
                 </NavDropdown>
+
                 <NavLink
                   to="/contact"
                   className="nav-link"
                   style={{ color: "white" }} // Ensure white text
-                  onClick={handleClose}
+                  onClick={() => {
+                    handleClose(); // Close the menu
+                    window.scrollTo(0, 0); // Scroll to the top
+                  }}
                 >
                   Contact
                 </NavLink>

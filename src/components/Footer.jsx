@@ -98,66 +98,126 @@ const Footer = () => {
               </div>
             </div>
           </Col>
-          <Col md={2} className="text-start text-md-start">
-            <h5 className="">QUICK LINKS</h5>
+          <Col md={2} className="text-start text-md-start hover-link">
+            <h5 className="" style={{ fontSize: "22px", color: "#870be7" }}>
+              QUICK LINKS
+            </h5>
             <ul className="list-unstyled">
               <li>
-                <Link to="/" className="text-light">
+                <Link
+                  to="/"
+                  className="text-light"
+                  onClick={() => window.scrollTo(0, 0)} /* Scroll to top */
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-light">
+                <Link
+                  to="/services"
+                  className="text-light"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/aboutus" className="text-light">
+                <Link
+                  to="/aboutus"
+                  className="text-light"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/ourworks" className="text-light">
+                <Link
+                  to="/ourworks"
+                  className="text-light"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   Our Clients
                 </Link>
               </li>
               <li>
-                <Link to="/ourworks" className="text-light">
+                <Link
+                  to="/ourworks"
+                  className="text-light"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   Blog
                 </Link>
               </li>
             </ul>
           </Col>
-          <Col md={2} className="text-start text-md-start">
-            <h5 className="">SERVICES</h5>
+
+          <Col md={2} className="text-start text-md-start hover-link">
+            <h5 className="" style={{ fontSize: "22px", color: "#870be7" }}>
+              SERVICES
+            </h5>
             <ul className="list-unstyled">
               <li>
-                <Link to="/services/webdevelopment" className="text-light">
+                <Link
+                  to="/services/webdevelopment"
+                  className="text-light"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   Web Development
                 </Link>
               </li>
               <li>
-                <Link to="/services/designing" className="text-light">
+                <Link
+                  to="/services/designing"
+                  className="text-light"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   Designing
                 </Link>
               </li>
               <li>
-                <Link to="/services/branding" className="text-light">
+                <Link
+                  to="/services/branding"
+                  className="text-light"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   Branding
                 </Link>
               </li>
               <li>
-                <Link to="/services/contentcreation" className="text-light">
+                <Link
+                  to="/services/contentcreation"
+                  className="text-light"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   Content Creation
                 </Link>
               </li>
             </ul>
           </Col>
-          <Col md={2} className="text-start text-md-start">
-            <h5 className="">OTHERS</h5>
+
+          <Col md={2} className="text-start text-md-start hover-link">
+            <h5 className="" style={{ fontSize: "22px", color: "#870be7" }}>
+              OTHERS
+            </h5>
             <ul className="list-unstyled fs-6">
-              <li className="d-flex align-items-center">Contact Us</li>
-              <li className="d-flex align-items-center">Privacy Policy</li>
+              <li className="d-flex align-items-center">
+                <Link
+                  to="/contact"
+                  className="text-light"
+                  onClick={() => window.scrollTo(0, 0)} /* Scroll to top */
+                >
+                  Contact
+                </Link>
+              </li>
+              <li className="d-flex align-items-center">
+                <Link
+                  to="/contact"
+                  className="text-light"
+                  onClick={() => window.scrollTo(0, 0)} /* Scroll to top */
+                >
+                  Privacy Policy
+                </Link>
+              </li>
             </ul>
           </Col>
         </Row>

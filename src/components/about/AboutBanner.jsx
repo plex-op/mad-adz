@@ -43,28 +43,7 @@ const AboutBanner = () => {
             >
               {data.description}
             </p>
-            <Button
-              variant="primary"
-              className="home-btn mt-5"
-              style={{
-                backgroundColor: "transparent",
-                color: "white ",
-                padding: "15px 25px",
-                border: "2px solid #870be7",
-                borderRadius: "50px",
-                cursor: "pointer",
-                fontWeight: "bold",
-                transition: "all 0.3s ease",
-              }}
-              onMouseEnter={(e) => (
-                (e.target.style.backgroundColor = "#870be7"),
-                (e.target.style.color = "#fff")
-              )} // Hover effect: Fill with color
-              onMouseLeave={(e) => (
-                (e.target.style.backgroundColor = "transparent"),
-                (e.target.style.color = "#fff")
-              )} // Reset on hover out
-            >
+            <Button variant="primary" className="home-btn mt-5 btn-common">
               Start Your Journey
             </Button>
           </div>

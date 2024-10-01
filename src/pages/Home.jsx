@@ -6,6 +6,8 @@ import WhyUsSection from "../components/home/WhyUsSection";
 import OurClients from "../components/home/OurClients";
 import { useLocation } from "react-router-dom";
 import ServiceCard from "../components/home/ServiceCard";
+import BackToTop from "../components/BackToTop";
+import WhatsAppButton from "../components/WhatsAppButton";
 
 const Home = () => {
   // const location = useLocation();
@@ -26,6 +28,8 @@ const Home = () => {
       <AboutUsSection />
       <WhyUsSection />
       <OurClients />
+      <BackToTop />
+      <WhatsAppButton />
     </div>
   );
 };

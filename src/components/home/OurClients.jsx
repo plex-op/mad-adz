@@ -97,7 +97,7 @@ function OurClients({ clientLogoRef }) {
                     src={client.logo}
                     alt={client.title}
                     style={{
-                      width: "150px",
+                      width: "170px",
                       height: "auto",
                       objectFit: "contain",
                       filter: "drop-shadow(0.5rem 0.5rem 1rem grey)",
