@@ -114,9 +114,13 @@ h6 {
 /* navhover effect */
 
 .nav-link {
-  color: white; /* Default link color */
+  color: white !important; /* Default link color */
   text-decoration: none; /* Remove underline */
   position: relative; /* Position for the pseudo-element */
+}
+
+.navbar-content {
+  color: white !important;
 }
 
 .nav-link:hover {
@@ -146,17 +150,6 @@ h6 {
 }
 
 
-/* footer */
-
-.footer a {
-  color: #ffffff; /* Default link color */
-  text-decoration: none; /* Remove underline */
-  transition: color 0.3s ease; /* Smooth transition for the hover effect */
-}
-
-.footer a:hover {
-  color: red; /* Change link color to red on hover */
-}
 
 
 
@@ -335,6 +328,17 @@ footer p {
   /* font-family: "kreadon-extrabold"; */
 }
 
+/* footer */
+
+.footer a {
+  color: #ffffff; /* Default link color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.footer a:hover {
+  color: red; /* Change link color to red on hover */
+}
 
 
 

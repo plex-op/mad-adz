@@ -40,8 +40,8 @@
   @media (max-width:768px) {
     
     .serv-img img{
-      margin-top: 20px;
-      width: 70% !important;
+      margin-top: 40px;
+      width: 100% !important;
      }
      .vh-md-100 {
       height: 100%;

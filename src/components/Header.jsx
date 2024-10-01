@@ -45,7 +45,7 @@ function Header() {
           <Navbar.Brand
             href="#home"
             style={{
-              color: "white",
+              color: "white", // Make sure the text color stays white
               fontSize: "30px",
               fontFamily: "kreadon-extrabold",
             }}
@@ -77,24 +77,23 @@ function Header() {
             style={{ background: "rgba(0,0,0,0.7)" }}
           >
             <Offcanvas.Header closeButton style={{ filter: "invert(1)" }}>
-              <Offcanvas.Title id="offcanvasNavbarLabel">Menu</Offcanvas.Title>
+              <Offcanvas.Title
+                id="offcanvasNavbarLabel"
+                style={{ color: "white" }}
+              >
+                Menu
+              </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
                 <NavLink
                   to="/aboutus"
                   className="nav-link"
+                  style={{ color: "white" }} // Ensure white text
                   onClick={handleClose}
                 >
                   About
                 </NavLink>
-                {/* <NavLink
-                  to="/services"
-                  className="nav-link"
-                  onClick={handleClose}
-                >
-                  Products
-                </NavLink> */}
                 <NavDropdown
                   title={
                     <span style={{ color: "white" }}>
@@ -104,16 +103,32 @@ function Header() {
                   id="basic-nav-dropdown"
                   className="custom-dropdown"
                 >
-                  <NavDropdown.Item as={NavLink} to="/services/webdevelopment">
+                  <NavDropdown.Item
+                    as={NavLink}
+                    to="/services/webdevelopment"
+                    style={{ color: "black" }}
+                  >
                     Web Development
                   </NavDropdown.Item>
-                  <NavDropdown.Item as={NavLink} to="/services/branding">
+                  <NavDropdown.Item
+                    as={NavLink}
+                    to="/services/branding"
+                    style={{ color: "black" }}
+                  >
                     Branding
                   </NavDropdown.Item>
-                  <NavDropdown.Item as={NavLink} to="/services/designing">
+                  <NavDropdown.Item
+                    as={NavLink}
+                    to="/services/designing"
+                    style={{ color: "black" }}
+                  >
                     Designing
                   </NavDropdown.Item>
-                  <NavDropdown.Item as={NavLink} to="/services/contentcreation">
+                  <NavDropdown.Item
+                    as={NavLink}
+                    to="/services/contentcreation"
+                    style={{ color: "black" }}
+                  >
                     Content Creation
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
@@ -121,6 +136,7 @@ function Header() {
                 <NavLink
                   to="/contact"
                   className="nav-link"
+                  style={{ color: "white" }} // Ensure white text
                   onClick={handleClose}
                 >
                   Contact
