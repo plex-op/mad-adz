@@ -7,7 +7,9 @@ import {
   FaTwitter,
   FaInstagram,
   FaLinkedinIn,
+  FaYoutube,
 } from "react-icons/fa";
+import { RiTwitterXFill } from "react-icons/ri";
 import Form from "react-bootstrap/Form";
 import "./contact.css";
 import { Link } from "react-router-dom";
@@ -104,7 +106,7 @@ const ContactForm = () => {
                     rel="noopener noreferrer"
                     style={{ color: "white", marginRight: "10px" }}
                   >
-                    <FaTwitter style={{ fontSize: "25px" }} />
+                    <RiTwitterXFill style={{ fontSize: "25px" }} />
                   </a>
                   <a
                     href="https://instagram.com"
@@ -121,6 +123,14 @@ const ContactForm = () => {
                     style={{ color: "white", marginRight: "10px" }}
                   >
                     <FaLinkedinIn style={{ fontSize: "25px" }} />
+                  </a>
+                  <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "white", marginRight: "10px" }}
+                  >
+                    <FaYoutube style={{ fontSize: "25px" }} />
                   </a>
                 </div>
               </div>
