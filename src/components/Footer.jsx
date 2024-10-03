@@ -39,7 +39,7 @@ const Footer = () => {
       style={{ backgroundColor: "#1a1a1a" }}
     >
       <Container>
-        <Row className="mb-4">
+        <Row className="">
           <Col md={3} className="text-md-start">
             <div className="social-icons  d-flex flex-column">
               <div className="card1"></div>
@@ -155,16 +155,6 @@ const Footer = () => {
                   Our Clients
                 </Link>
               </li>
-              <li style={{ marginBottom: "24px" }}>
-                <Link
-                  to="/ourworks"
-                  className="text-light"
-                  style={{ color: "#d3d3d3", textDecoration: "none" }}
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  Blog
-                </Link>
-              </li>
             </ul>
           </Col>
 
@@ -250,6 +240,16 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
+              <li style={{ marginBottom: "24px" }}>
+                <Link
+                  to="/ourworks"
+                  className="text-light"
+                  style={{ color: "#d3d3d3", textDecoration: "none" }}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  Blog
+                </Link>
+              </li>
               <li
                 className="d-flex align-items-center"
                 style={{ marginBottom: "24px" }}
@@ -304,8 +304,9 @@ const Footer = () => {
         {/* Copyright and Footer Bottom */}
         <Row>
           <Col md={12} className="text-center">
-            <p style={{ fontSize: "14px" }}>Copyright © 2024 MadAdz</p>
-            <p style={{ fontSize: "14px" }}>Powered by Madadz</p>
+            <p style={{ fontSize: "14px" }}>
+              Copyright © 2024 MadAdz <strong> Powered by Madadz</strong>
+            </p>
           </Col>
         </Row>
       </Container>

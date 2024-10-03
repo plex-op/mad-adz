@@ -35,6 +35,7 @@ const AboutPoints = () => {
                   border: "1px solid rgba(255, 255, 255, 0.1)", // Subtle border
                   width: "100%", // Card size limit
                   margin: "auto", // Center the card horizontally
+                  height: "100%",
                 }}
                 className="about-card-des"
               >

@@ -86,25 +86,25 @@ export const aboutPointsHeading = {
 
 export const cardData = [
   {
-    img: "img/power.png", // Replace with actual image paths
+    img: "/img/power.png", // Replace with actual image paths
     title: "Foundation Laid",
     description:
       "Established with a mission to provide cutting-edge digital solutions, we set the groundwork for creativity and technology to converge.",
   },
   {
-    img: "img/power.png",
+    img: "/img/power.png",
     title: "Recognition and Growth",
     description:
       "Achieved industry recognition for our work, which fueled our passion and commitment to continuously improve and adapt to the ever-changing digital landscape.",
   },
   {
-    img: "img/power.png",
+    img: "/img/power.png",
     title: "Team Expansion",
     description:
       "Grew our talented team, bringing in diverse skills and perspectives to enhance our offerings and foster a culture of innovation.",
   },
   {
-    img: "img/power.png",
+    img: "/img/power.png",
     title: "Celebrating Success Together",
     description:
       "Through every project and partnership, we celebrated shared successes with our clients, reinforcing our commitment to achieving remarkable outcomes together.",

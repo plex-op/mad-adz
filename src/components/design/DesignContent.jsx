@@ -1,56 +1,43 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import "./gallery.css"; // Assuming you'll put your CSS in this file
-import { FaCheck } from "react-icons/fa";
+import "./gallery.css"; // Assuming this is the CSS file where styles are defined
 
 const DesignContent = () => {
   // Array of additional information items
   const additionalInfo = [
-    "Brand Identity Design",
-    "Print Design",
-    "Social Media Posters",
-    "Web Graphics",
-    "Packaging Design",
-    "Illustration Services",
-    "Advertising Design",
-    "Presentation Design",
-    "Email Marketing Graphics",
-    "Infographic Design",
+    { name: "Brand Identity", icon: "/img/power.png" },
+    { name: "Print Design", icon: "/img/power.png" },
+    { name: "Social Media Posters", icon: "/img/power.png" },
+    { name: "Web Graphics", icon: "/img/power.png" },
+    { name: "Packaging Design", icon: "/img/power.png" },
+    { name: "Illustration", icon: "/img/power.png" },
+    { name: "Advertising", icon: "/img/power.png" },
+    { name: "Presentation", icon: "/img/power.png" },
+    { name: "Email Marketing", icon: "/img/power.png" },
+    { name: "Infographic", icon: "/img/power.png" },
   ];
 
   return (
-    <section className="py-5">
-      <Container className="mt-4">
+    <section className="py-5" style={{ background: "#eee" }}>
+      <Container className="mt-4 description-container">
         <Row className="row align-items-center">
-          <Col md={6} className="order-2 order-md-1">
-            <h3 style={{ color: "white" }}></h3>
-            <ul
-              style={{
-                color: "white",
-                textAlign: "left",
-                paddingLeft: "0", // Remove left padding for list
-                listStyleType: "none", // Remove default bullets
-              }}
-            >
-              {additionalInfo.map((info, index) => (
-                <li
-                  key={index}
-                  style={{
-                    marginBottom: "10px",
-                    display: "flex",
-                    alignItems: "center",
-                  }}
-                >
-                  <FaCheck style={{ color: "#9D69FF", marginRight: "10px" }} />
-                  {info}
-                </li>
+          {/* Icons Column with Flex Wrap */}
+          <Col md={12}>
+            <div className="d-flex flex-wrap justify-content-center align-items-center gap-3">
+              {additionalInfo.map((service, index) => (
+                <div className="box-btn box-bg" key={index}>
+                  <div className="icon-box">
+                    <img
+                      src={service.icon}
+                      alt={service.name}
+                      className="icon-img"
+                    />
+                  </div>
+                  <div className="box-text">
+                    <p>{service.name}</p>
+                  </div>
+                </div>
               ))}
-            </ul>
-          </Col>
-
-          <Col md={6}>
-            <div className="d-flex align-items-center order-1 order-md-2">
-              <img src="/img/gd.png" alt="" style={{ width: "100%" }} />
             </div>
           </Col>
         </Row>

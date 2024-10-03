@@ -38,20 +38,21 @@ const BackToTop = () => {
 const styles = {
   backToTopButton: {
     position: "fixed",
-    bottom: "100px", // Place it higher to avoid overlap with WhatsApp
+    bottom: "50px", // Place it higher to avoid overlap with WhatsApp
     right: "30px", // Same side as WhatsApp, but further up
-    width: "30px",
-    height: "30px",
-    backgroundColor: "#870be7", // Custom color
+    width: "40px",
+    height: "40px",
+    backgroundColor: "#1a1a1a", // Custom color
     color: "#fff",
-    // borderRadius: "50%",
+    borderRadius: "50%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     cursor: "pointer",
-    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
+    boxShadow: "2px 2px 2px 2px rgba(255, 255, 255, 0.3)",
     zIndex: 999, // Ensure it's behind WhatsApp button
     transition: "opacity 0.3s ease",
+    // padding:"20px"
   },
 };
 

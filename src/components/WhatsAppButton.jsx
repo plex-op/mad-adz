@@ -23,10 +23,10 @@ const WhatsAppButton = () => {
 const styles = {
   whatsappButton: {
     position: "fixed",
-    bottom: "30px", // Position it higher than the "Back to Top" button
+    bottom: "100px", // Position it higher than the "Back to Top" button
     right: "30px", // Stay aligned on the right side
-    width: "60px",
-    height: "60px",
+    width: "40px",
+    height: "40px",
     backgroundColor: "#25D366", // WhatsApp green color
     color: "#fff",
     borderRadius: "50%",
