@@ -4,6 +4,7 @@ import DigitalMarket from "../../components/digitalmarketing/DigitalMarket";
 import DigitalCard from "../../components/digitalmarketing/DigitalCard";
 import DigitalMedia from "../../components/digitalmarketing/DigitalMedia";
 import BackToTop from "../../components/BackToTop";
+import WhatsAppButton from "../../components/WhatsAppButton";
 
 const Branding = () => {
   return (
@@ -18,6 +19,7 @@ const Branding = () => {
       {/* <DigitalMarket /> */}
       <DigitalCard />
       <DigitalMedia />
+      <WhatsAppButton />
       <BackToTop />
     </div>
   );

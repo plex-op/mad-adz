@@ -3,6 +3,7 @@ import DropdownBanner from "../../components/services/DropdownBanner";
 import ServiceSection from "../../components/services/ServicesSection";
 import TechStack from "../../components/services/TechStack";
 import BackToTop from "../../components/BackToTop";
+import WhatsAppButton from "../../components/WhatsAppButton";
 
 const WebDevelopment = () => {
   return (
@@ -16,6 +17,7 @@ const WebDevelopment = () => {
       />
       <ServiceSection />
       <TechStack />
+      <WhatsAppButton />
       <BackToTop />
     </div>
   );

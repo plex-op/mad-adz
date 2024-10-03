@@ -4,6 +4,7 @@ import DesignCard from "../../components/design/DesignCard";
 import DesignContent from "../../components/design/DesignContent";
 import TechStack from "../../components/design/TechStack";
 import BackToTop from "../../components/BackToTop";
+import WhatsAppButton from "../../components/WhatsAppButton";
 
 const Designing = () => {
   return (
@@ -18,6 +19,7 @@ const Designing = () => {
       <DesignContent />
       <DesignCard />
       <TechStack />
+      <WhatsAppButton />
       <BackToTop />
     </div>
   );

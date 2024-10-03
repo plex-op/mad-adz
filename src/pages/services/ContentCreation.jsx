@@ -3,6 +3,7 @@ import DropdownBanner from "../../components/services/DropdownBanner";
 import ContentCreate from "../../components/ContentCreation/ContentCreate";
 import TechStack from "../../components/ContentCreation/TechStack";
 import BackToTop from "../../components/BackToTop";
+import WhatsAppButton from "../../components/WhatsAppButton";
 
 const ContentCreation = () => {
   return (
@@ -17,6 +18,7 @@ const ContentCreation = () => {
       />
       <ContentCreate />
       <TechStack />
+      <WhatsAppButton />
       <BackToTop />
     </div>
   );
