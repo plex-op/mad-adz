@@ -132,7 +132,7 @@ const Footer = () => {
                   style={{ color: "#d3d3d3", textDecoration: "none" }}
                   onClick={() => window.scrollTo(0, 0)}
                 >
-                  Services
+                  Products
                 </Link>
               </li>
               <li style={{ marginBottom: "24px" }}>

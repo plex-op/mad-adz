@@ -5,20 +5,20 @@ import "./gallery.css"; // Assuming this is the CSS file where styles are define
 const DesignContent = () => {
   // Array of additional information items
   const additionalInfo = [
-    { name: "Brand Identity", icon: "/img/power.png" },
-    { name: "Print Design", icon: "/img/power.png" },
-    { name: "Social Media Posters", icon: "/img/power.png" },
-    { name: "Web Graphics", icon: "/img/power.png" },
-    { name: "Packaging Design", icon: "/img/power.png" },
-    { name: "Illustration", icon: "/img/power.png" },
-    { name: "Advertising", icon: "/img/power.png" },
-    { name: "Presentation", icon: "/img/power.png" },
-    { name: "Email Marketing", icon: "/img/power.png" },
-    { name: "Infographic", icon: "/img/power.png" },
+    { name: "Brand Identity", icon: "/img/icons/ldes.png" },
+    { name: "Print Design", icon: "/img/icons/pdes.png" },
+    { name: "Posters", icon: "/img/icons/posdes.png" },
+    { name: "Web Graphics", icon: "/img/icons/webgdes.png" },
+    // { name: "Packaging Design", icon: "/img/icons/pacdes.png" },
+    { name: "Illustration", icon: "/img/icons/Illdes.png" },
+    { name: "Advertising", icon: "/img/icons/advdes.png" },
+    { name: "Presentation", icon: "/img/icons/presdes.png" },
+    { name: "Email Marketing", icon: "/img/icons/edes.png" },
+    { name: "Infographic", icon: "/img/icons/infodes.png" },
   ];
 
   return (
-    <section className="py-5" style={{ background: "#eee" }}>
+    <section className="py-5" style={{ background: "#fff" }}>
       <Container className="mt-4 description-container">
         <Row className="row align-items-center">
           {/* Icons Column with Flex Wrap */}

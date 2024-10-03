@@ -15,7 +15,7 @@ function TechStack({ clientLogoRef }) {
       title: "Client 2",
     },
     {
-      logo: "/img/tech/figma.svg",
+      logo: "/img/tech/figma.png",
       title: "Client 3",
     },
     {

@@ -26,7 +26,7 @@ function Banner() {
                 color: "white",
               }}
             >
-              for Growth and Innovation..
+              For Growth and Innovation..
             </h1>
           </Col>
           <Col

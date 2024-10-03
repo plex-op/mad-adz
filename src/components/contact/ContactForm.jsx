@@ -210,6 +210,7 @@ const ContactForm = () => {
                   <Form.Control
                     className="enquiry-input"
                     as="textarea"
+                    type="text"
                     rows={3}
                     placeholder="Your Message"
                     style={{
@@ -217,7 +218,6 @@ const ContactForm = () => {
                       border: "1px solid #ccc",
                       padding: "10px",
                       background: "transparent",
-                      color: "white",
                     }}
                   />
                 </Form.Group>
